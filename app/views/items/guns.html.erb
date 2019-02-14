@@ -1,0 +1,35 @@
+<h1>Items#guns</h1>
+<p>Find me in app/views/items/guns.html.erb</p>
+
+<%= 'Pistols:' %></br>
+<% @pstl_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %></br>
+
+<%= 'Sub Machine Guns:' %></br>
+<% @smg_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %></br>
+
+<%= 'Assault Rifles:' %></br>
+<% @aslt_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %>
+
+<%= 'Light Machine Guns:' %></br>
+<% @lmg_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %></br>
+
+<%= 'Sniper Rifles:' %></br>
+<% @snpr_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %></br>
+
+<%= 'Shotguns:' %></br>
+<% @stgn_list.each do |p| %>
+	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
+<% end %></br>
+
+
+<%= link_to("Back", {:controller => 'items', :action => 'index'}) %>

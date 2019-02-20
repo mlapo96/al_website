@@ -1,0 +1,8 @@
+<div class="background">
+	<div class="main">
+
+		<% @legends.each do |leg| %>
+			<%= link_to(leg.legend_name, {:controller => 'items', :action => 'legend_stats', :id => leg.id}) %></br>
+		<% end %>
+	</div>
+</div>

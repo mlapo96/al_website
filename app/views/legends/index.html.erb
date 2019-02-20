@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Legends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Legend name</th>
+      <th>Legend desc</th>
+      <th>Legend passive name</th>
+      <th>Legend passive desc</th>
+      <th>Legend ability name</th>
+      <th>Legend ability desc</th>
+      <th>Legend ult name</th>
+      <th>Legend ult desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @legends.each do |legend| %>
+      <tr>
+        <td><%= legend.legend_name %></td>
+        <td><%= legend.legend_desc %></td>
+        <td><%= legend.legend_passive_name %></td>
+        <td><%= legend.legend_passive_desc %></td>
+        <td><%= legend.legend_ability_name %></td>
+        <td><%= legend.legend_ability_desc %></td>
+        <td><%= legend.legend_ult_name %></td>
+        <td><%= legend.legend_ult_desc %></td>
+        <td><%= link_to 'Show', legend %></td>
+        <td><%= link_to 'Edit', edit_legend_path(legend) %></td>
+        <td><%= link_to 'Destroy', legend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Legend', new_legend_path %>

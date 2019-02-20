@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Legend name:</strong>
+  <%= @legend.legend_name %>
+</p>
+
+<p>
+  <strong>Legend desc:</strong>
+  <%= @legend.legend_desc %>
+</p>
+
+<p>
+  <strong>Legend passive name:</strong>
+  <%= @legend.legend_passive_name %>
+</p>
+
+<p>
+  <strong>Legend passive desc:</strong>
+  <%= @legend.legend_passive_desc %>
+</p>
+
+<p>
+  <strong>Legend ability name:</strong>
+  <%= @legend.legend_ability_name %>
+</p>
+
+<p>
+  <strong>Legend ability desc:</strong>
+  <%= @legend.legend_ability_desc %>
+</p>
+
+<p>
+  <strong>Legend ult name:</strong>
+  <%= @legend.legend_ult_name %>
+</p>
+
+<p>
+  <strong>Legend ult desc:</strong>
+  <%= @legend.legend_ult_desc %>
+</p>
+
+<%= link_to 'Edit', edit_legend_path(@legend) %> |
+<%= link_to 'Back', legends_path %>

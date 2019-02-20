@@ -1,3 +1,40 @@
-<h1>Gun Stats</h1>
+<div class="background">
+	<div class="main">
 
-<%= "Gun: #{@gun_name}" %>
+	<h1><%= @gun.gun_name %></h1>
+
+	<p>
+  	<strong>Gun type:</strong>
+  	<%= @gun.gun_type %>
+	</p>
+
+	<p>
+  	<strong>Ammo type:</strong>
+  	<%= @gun.ammo_type %>
+	</p>
+
+	<p>
+  	<strong>Gun description:</strong>
+  	<%= @gun.gun_description %>
+	</p>
+
+	<p>
+  	<strong>Gun damage:</strong>
+  	<%= @gun.gun_body %>
+	</p>
+
+	<p>
+  	<strong>Headshot damage:</strong>
+  	<%= @gun.gun_headshot %>
+	</p>
+
+	<p>
+  	<strong>Mag Size:</strong>
+  	<%= @gun.mag_size %>
+	</p>
+
+	<% path = "/assets/guns/" + @gun.gun_name + ".PNG" %>
+	<%= image_tag (path)%>
+
+	</div>
+</div>

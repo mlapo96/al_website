@@ -1,2 +1,50 @@
-<h1>Items#attachments</h1>
-<p>Find me in app/views/items/attachments.html.erb</p>
+<div class="background">
+	<div class="main">
+
+<h1>Attachments</h1>
+
+<p><strong>Hop Ups: </strong></br>
+<% @attachments.each do |atmt| %>
+	<% if(atmt.atmt_type == "Hop Up") %>
+		<%= link_to(atmt.atmt_name, {:controller => 'items', :action => 'attachment_stats', :id => atmt.id}) %></br>
+	<% end %>
+<% end %>
+</p>
+
+<p><strong>Optics: </strong></br>
+<% @attachments.each do |atmt| %>
+	<% if(atmt.atmt_type == "Optic") %>
+		<%= link_to(atmt.atmt_name, {:controller => 'items', :action => 'attachment_stats', :id => atmt.id}) %></br>
+	<% end %>
+<% end %>
+</p>
+
+<p><strong>Magazine: </strong></br>
+<% @attachments.each do |atmt| %>
+	<% if(atmt.atmt_type == "Magazine") %>
+		<%= link_to(atmt.atmt_name, {:controller => 'items', :action => 'attachment_stats', :id => atmt.id}) %></br>
+	<% end %>
+<% end %>
+</p>
+
+<p><strong>Barrel: </strong></br>
+<% @attachments.each do |atmt| %>
+	<% if(atmt.atmt_type == "Barrel") %>
+		<%= link_to(atmt.atmt_name, {:controller => 'items', :action => 'attachment_stats', :id => atmt.id}) %></br>
+	<% end %>
+<% end %>
+</p>
+
+<p><strong>Stock: </strong></br>
+<% @attachments.each do |atmt| %>
+	<% if(atmt.atmt_type == "Stock") %>
+		<%= link_to(atmt.atmt_name, {:controller => 'items', :action => 'attachment_stats', :id => atmt.id}) %></br>
+	<% end %>
+<% end %>
+</p>
+
+<%= link_to("Back", {:controller => 'items', :action => 'index'}) %>
+
+
+</div>
+</div>

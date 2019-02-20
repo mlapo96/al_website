@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  atmt_type: MyString
+  atmt_name: MyString
+  attaches_to: MyString
+  color: MyString
+  description: MyString
+
+two:
+  atmt_type: MyString
+  atmt_name: MyString
+  attaches_to: MyString
+  color: MyString
+  description: MyString

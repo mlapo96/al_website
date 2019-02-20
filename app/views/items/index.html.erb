@@ -1,11 +1,18 @@
-<h1>Items</h1>
-<%= link_to("Guns", {:controller => 'items', :action => 'guns'}) %>
-<%= link_to("Attachments", {:controller => 'items', :action => 'attachments'}) %>
-<%= link_to("Consumables", {:controller => 'items', :action => 'consumables'}) %>
 
-</br>
-<% if(params.has_key?(:id)) %>
-	<%= "Gun ID: #{@gun_id}" %>
-<% end %>
 
-<%= link_to("Back", {:controller => 'welcome', :action => 'index'}) %>
+<div class="background">
+	<div class="main">
+		<h1>Items</h1>
+		<%= link_to("Legends", {:controller => 'items', :action => 'legends'}) %>
+		<%= link_to("Guns", {:controller => 'items', :action => 'guns'}) %>
+		<%= link_to("Attachments", {:controller => 'items', :action => 'attachments'}) %>
+		<%= link_to("Consumables", {:controller => 'items', :action => 'consumables'}) %>
+
+		</br>
+		<% if(params.has_key?(:id)) %>
+		<%= "Gun ID: #{@gun_id}" %>
+		<% end %>
+
+		<%= link_to("Back", {:controller => 'welcome', :action => 'index'}) %>
+		</div>
+</div>

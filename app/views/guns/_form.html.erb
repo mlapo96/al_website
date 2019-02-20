@@ -1,0 +1,52 @@
+<%= form_with(model: gun, local: true) do |form| %>
+  <% if gun.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gun.errors.count, "error") %> prohibited this gun from being saved:</h2>
+
+      <ul>
+      <% gun.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gun_name %>
+    <%= form.text_field :gun_name, id: :gun_gun_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gun_type %>
+    <%= form.select :gun_type, ['Pistol', 'Sub Machine Gun', 'Assault Rifle', 'Light Machine Gun', 'Sniper Rifle', 'Shotgun']  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ammo_type %>
+    <%= form.select :ammo_type, ['Light', 'Heavy', 'Shells', 'Energy', 'Special'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gun_description %>
+    <%= form.text_field :gun_description, id: :gun_gun_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gun_body %>
+    <%= form.number_field :gun_body, id: :gun_gun_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gun_headshot %>
+    <%= form.number_field :gun_headshot, id: :gun_gun_headshot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mag_size %>
+    <%= form.number_field :mag_size, id: :gun_mag_size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

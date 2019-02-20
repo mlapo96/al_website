@@ -6,21 +6,27 @@ class ItemsController < ApplicationController
   end
 
   def guns
-  	@pstl_list = ['RE-45 Auto', 'P2020', 'Wingman']
-  	@smg_list = ['Alternator', 'Prowler Burst PDW', 'R-99']
-  	@aslt_list = ['Hemlok Burst', 'R-301 Carbine', 'VK-47 Flatline']
-  	@lmg_list = ['Devotion', 'M600 Spitfire']
-  	@snpr_list = ['G7-Scout', 'Kraber', 'Longbow DMR', 'Triple Take']
-  	@stgn_list = ['EVA-8 Auto', 'Mozambique', 'Peacekeeper']
+    @guns = Gun.all
   end
   
   def gun_stats
-  	if(params.has_key?(:id))
-  		@gun_name = params['id']
-  	end
+    @gun = Gun.find(params[:id])
   end
 
   def attachments
+    @attachments = Attachment.all
+  end
+
+  def attachment_stats
+    @attachment = Attachment.find(params[:id])
+  end
+
+  def legends
+    @legends = Legend.all
+  end
+
+  def legend_stats
+    @legend = Legend.find(params[:id])
   end
 
   def consumables

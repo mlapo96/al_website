@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :legends
+  resources :guns
+  resources :attachments
   get 'items/guns'
 
   get 'items/attachments'

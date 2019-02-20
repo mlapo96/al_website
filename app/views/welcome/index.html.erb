@@ -1,4 +1,22 @@
+<div class="background">
+	<div class="main">
+
 <h1>Welcome to the site!</h1>
 
-<%= link_to("Go To Profile", {:controller => 'profile', :action => 'index'}) %></br>
-<%= link_to("Go To Items", {:controller => 'items', :action => 'index'}) %>
+
+<input type="text" name="player" id="player"/>
+<input type="button" value="Search" onclick="search()"></br>
+<!--%= link_to("Search", {:controller => 'profile', :action => 'index', :user => 'thegreatDORF'}) %></br-->
+<%= link_to("Go To Legends/Items", {:controller => 'items', :action => 'index'}) %>
+
+
+<script>
+function search() {
+  var srch = document.getElementById("player").value;
+  var path = "/profile/index?user=" + String(srch);
+  location.href = path
+}
+</script>
+
+	</div>
+</div>

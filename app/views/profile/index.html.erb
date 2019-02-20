@@ -1,3 +1,16 @@
-<h1>This is the profile</h1>
+<div class="background">
+	<div class="main">
 
-<%= link_to("Go To Welcome", {:controller => 'welcome', :action => 'index'}) %>
+		<div style="background-image: url(<%= @bgimage %>); height:20%">
+			
+		</div>
+
+		<h1><%= @name +": level "+ @level %></h1>
+		<p><strong>Main legend: <%= @main_legend %></strong></p>
+		<p><strong><%= @kills %> kills</strong></p>
+		<!--%= image_tag("#{@bgimage}") %></br-->
+
+		<%= link_to("Go To Welcome", {:controller => 'welcome', :action => 'index'}) %>
+	</div>
+	
+</div>

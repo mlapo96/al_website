@@ -1,0 +1,42 @@
+<%= form_with(model: attachment, local: true) do |form| %>
+  <% if attachment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attachment.errors.count, "error") %> prohibited this attachment from being saved:</h2>
+
+      <ul>
+      <% attachment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :atmt_type %>
+    <%= form.select :atmt_type, ['Hop Up', 'Optic', 'Magazine', 'Barrel', 'Stock'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atmt_name %>
+    <%= form.text_field :atmt_name, id: :attachment_atmt_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attaches_to %>
+    <%= form.text_field :attaches_to, id: :attachment_attaches_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :attachment_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :attachment_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

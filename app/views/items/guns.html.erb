@@ -1,35 +1,57 @@
-<h1>Items#guns</h1>
-<p>Find me in app/views/items/guns.html.erb</p>
+<div class="background">
+	<div class="main">
 
-<%= 'Pistols:' %></br>
-<% @pstl_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %></br>
+	<h1>Guns</h1>
 
-<%= 'Sub Machine Guns:' %></br>
-<% @smg_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %></br>
+	<p><strong>Pistols: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Pistol") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>
+	</p>
 
-<%= 'Assault Rifles:' %></br>
-<% @aslt_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %>
+	<p><strong>Sub Machine Guns: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Sub Machine Gun") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>	
+	</p>
 
-<%= 'Light Machine Guns:' %></br>
-<% @lmg_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %></br>
+	<p><strong>Assault Rifles: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Assault Rifle") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>
+	</p>
 
-<%= 'Sniper Rifles:' %></br>
-<% @snpr_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %></br>
+	<p><strong>Light Machine Guns: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Light Machine Gun") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>
+	</p>
 
-<%= 'Shotguns:' %></br>
-<% @stgn_list.each do |p| %>
-	<%= link_to(p, {:controller => 'items', :action => 'gun_stats', :id => p}) %></br>
-<% end %></br>
+	<p><strong>Sniper Rifles: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Sniper Rifle") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>
+	</p>
 
+	<p><strong>Shotguns: </strong></br>
+	<% @guns.each do |gun| %>
+		<% if(gun.gun_type == "Shotgun") %>
+			<%= link_to(gun.gun_name, {:controller => 'items', :action => 'gun_stats', :id => gun.id}) %></br>
+		<% end %>
+	<% end %>
+	</p>
 
-<%= link_to("Back", {:controller => 'items', :action => 'index'}) %>
+	<%= link_to("Back", {:controller => 'items', :action => 'index'}) %>
+
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gun name:</strong>
+  <%= @gun.gun_name %>
+</p>
+
+<p>
+  <strong>Gun type:</strong>
+  <%= @gun.gun_type %>
+</p>
+
+<p>
+  <strong>Ammo type:</strong>
+  <%= @gun.ammo_type %>
+</p>
+
+<p>
+  <strong>Gun description:</strong>
+  <%= @gun.gun_description %>
+</p>
+
+<p>
+  <strong>Gun body:</strong>
+  <%= @gun.gun_body %>
+</p>
+
+<p>
+  <strong>Gun headshot:</strong>
+  <%= @gun.gun_headshot %>
+</p>
+
+<p>
+  <strong>Mag size:</strong>
+  <%= @gun.mag_size %>
+</p>
+
+<%= link_to 'Edit', edit_gun_path(@gun) %> |
+<%= link_to 'Back', guns_path %>

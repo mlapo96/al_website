@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Atmt type:</strong>
+  <%= @attachment.atmt_type %>
+</p>
+
+<p>
+  <strong>Atmt name:</strong>
+  <%= @attachment.atmt_name %>
+</p>
+
+<p>
+  <strong>Attaches to:</strong>
+  <%= @attachment.attaches_to %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @attachment.color %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @attachment.description %>
+</p>
+
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>
